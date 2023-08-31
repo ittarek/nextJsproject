@@ -1,19 +1,14 @@
-
-
 const getAllNews = async (category_id) => {
-    let url = 'http://localhost:5000/news';
+  let url = "http://localhost:5000/news";
 
-    if(category_id){
-url += "?category_id=" + category_id;
+  if (category_id) {
+    url += "?category_id=" + category_id;
+  }
+  const res = await fetch(url, {
+    cache: "no-cache",
+  });
 
-    }
-    const res = await fetch(url,{
-        cache: "no-cache"
-    }
-
-    )
-   
-       return res.json()
+  return res.json();
 };
 
 export default getAllNews;

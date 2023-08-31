@@ -1,12 +1,8 @@
 // "use client"
 
 
-
-
-
-
 import Categories from '@/components/HomeSection/homePage/Categories';
-import { SingleNews } from '@/components/HomeSection/homePage/SingleNews';
+
 import Slider from './gallary/Slider';
 
 const HomePage = () => {
