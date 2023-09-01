@@ -1,6 +1,7 @@
 // "use client"
 const getAllCategories = async () => {
-  const res = await fetch("https://next-jsproject-35jh.vercel.app", {
+  // https://next-jsproject-35jh-git-main-ittarek.vercel.app/
+  const res = await fetch("https://next-jsproject-35jh-git-main-ittarek.vercel.app/category", {
     cache: "no-cache",
   });
 
