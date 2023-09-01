@@ -2,9 +2,22 @@ import getAllCategories from "@/utils/getAllCategories";
 
 import SingleCategory from "./SingleCategory";
 
-const Categories = async () => {
-  const categories = await getAllCategories();
-
+const Categories =  () => {
+//   const categories = await getAllCategories();
+const categories = [
+    {
+        "name": "tarek",
+        "id" : 1
+    },
+    {
+        "name": "tarek",
+        "id" : 2
+    },
+    {
+        "name": "tarek",
+        "id" : 3
+    }
+]
   return (
     <div>
       <h2 className="font-bold text-4xl my-11 text-center  text-purple-400">
