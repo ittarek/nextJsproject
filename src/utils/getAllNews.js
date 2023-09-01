@@ -1,5 +1,5 @@
 const getAllNews = async (category_id) => {
-  let url = "https://next-jsproject-35jh.vercel.app/news";
+  let url = "https://next-jsproject-35jh.vercel.app";
 
 
   if (category_id) {
