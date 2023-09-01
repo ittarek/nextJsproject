@@ -1,19 +1,6 @@
 const getAllNews = async (category_id) => {
-  // let url = "http://localhost:5000/news";
-let url = [
-  {
-    "name":"tariqul islam",
-    "id": 1,
-  },
-  {
-    "name":"tariqul islam",
-    "id": 1,
-  },
-  {
-    "name":"tariqul islam",
-    "id": 1,
-  }
-]
+  let url = "https://next-jsproject-35jh.vercel.app/news";
+
 
   if (category_id) {
     url += "?category_id=" + category_id;

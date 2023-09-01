@@ -3,22 +3,9 @@ import getAllCategories from '@/utils/getAllCategories';
 
 import SingleCategory from './SingleCategory';
 
-const Categories =  () => {
-    // const categories = await getAllCategories()
-    const categories = [
-        {
-          "name":"tariqul islam",
-          "id": 1,
-        },
-        {
-          "name":"tariqul islam",
-          "id": 1,
-        },
-        {
-          "name":"tariqul islam",
-          "id": 1,
-        }
-      ]
+const Categories = async () => {
+    const categories = await getAllCategories()
+  
     return (
         <div>
             <h2 className='font-bold text-4xl my-11 text-center  text-purple-400'>Our News Link</h2>
