@@ -1,15 +1,15 @@
 import loadSingleData from '@/utils/loadSingleData';
-import React from 'react';
-
-export const generateMetadata = async ({params}) =>{
-  const {title} = await loadSingleData(params.id)
-  return {
-    title: title,
-  }
-}
 
 
-const singleBlog = async ({params}) => {
+// export const generateMetadata = async ({params}) =>{
+//   const {title} = await loadSingleData(params.id)
+//   return {
+//     title: title,
+//   }
+// }
+
+
+const SingleBlog = async ({params}) => {
   
 
   const {id,title,body} = await loadSingleData(params.id)
@@ -29,4 +29,4 @@ const singleBlog = async ({params}) => {
     );
 };
 
-export default singleBlog;
+export default SingleBlog;

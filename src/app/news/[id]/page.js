@@ -7,7 +7,7 @@ const newsPage = async ({searchParams}) => {
     return (
         <div className='container mx-auto'>
             {
-allNews.map(singleNews=> <SingleNews key={singleNews.id} singleNews={singleNews}></SingleNews>)
+allNews.map(singleNews=> <SingleNews key={singleNews._id} singleNews={singleNews}></SingleNews>)
             }
         </div>
     );

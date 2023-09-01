@@ -1,6 +1,6 @@
 
 import getAllCategories from '@/utils/getAllCategories';
-import React from 'react';
+
 import SingleCategory from './SingleCategory';
 
 const Categories = async () => {
