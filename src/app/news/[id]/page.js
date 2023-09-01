@@ -1,11 +1,11 @@
-import SingleNews from '@/components/HomeSection/homePage/SingleNews';
+import SingleNews from '@/components/HomeSection/SingleNews';
 import getAllNews from '@/utils/getAllNews';
 import React from 'react';
 
 const newsPage = async ({searchParams}) => {
     const allNews = await getAllNews(searchParams.category_id)
     return (
-        <div className=''>
+        <div className='container mx-auto'>
             {
 allNews.map(singleNews=> <SingleNews key={singleNews.id} singleNews={singleNews}></SingleNews>)
             }

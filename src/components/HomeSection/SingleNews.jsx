@@ -1,25 +1,23 @@
+/* eslint-disable @next/next/no-img-element */
+// "use client"
 import Image from "next/image";
 
 const SingleNews = ({ singleNews }) => {
   const { title, image_url, thumbnail_ur, details } = singleNews;
 
   return (
-    <div className=" container mx-auto">
+
       <div className="card mx-auto my-5 w-full glass">
+
+       
         <figure>
-          {/* <Image
-            src={image_url}
-            alt="image"
-            width={450}
-            height={450}
-            className="max-h-[450px] mx-auto object-cover rounded-md"
-            sizes="33vw"
-          />{" "} */}
-          <img
+       
+   
+        <img
             src={image_url}
             alt="cart"
             className="max-h-[450px] mx-auto object-cover rounded-md"
-          />{" "}
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
@@ -29,7 +27,7 @@ const SingleNews = ({ singleNews }) => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 

@@ -1,4 +1,4 @@
-import NavLinks from '@/components/HomeSection/NavLinks';
+import NavLinks from '@/components/NavLinks';
 
 import React from 'react';
 
