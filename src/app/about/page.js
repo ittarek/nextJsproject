@@ -1,6 +1,7 @@
-"use client"
+// "use client"
 import "./about.css";
-import CountUp from "react-countup";
+import CountUp from './../../components/CountUp';
+
 
 
 export const metadata = {
