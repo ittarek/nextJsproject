@@ -2,23 +2,23 @@ import SingleNews from '@/components/HomeSection/SingleNews';
 import getAllNews from '@/utils/getAllNews';
 import React from 'react';
 
-const newsPage = async ({searchParams}) => {
-    const allNews = await getAllNews(searchParams.category_id)
-    // const allNews = [
-    //     {
-    //         "name": "tarek",
-    //         "id" : 1
-    //     },
-    //     {
-    //         "name": "tarek",
-    //         "id" : 2
-    //     },
-    //     {
-    //         "name": "tarek",
-    //         "id" : 3
-    //     }
+const newsPage =  ({searchParams}) => {
+    // const allNews = await getAllNews(searchParams.category_id)
+    const allNews = [
+        {
+            "name": "tarek",
+            "id" : 1
+        },
+        {
+            "name": "tarek",
+            "id" : 2
+        },
+        {
+            "name": "tarek",
+            "id" : 3
+        }
     
-    // ]
+    ]
     return (
         <div className='container mx-auto'>
             {

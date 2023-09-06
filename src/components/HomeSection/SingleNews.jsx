@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 // "use client"
-import Image from "next/image";
 
-const SingleNews = ({ singleNews }) => {
+
+const SingleNews =  ({ singleNews }) => {
+ 
   const { title, image_url, thumbnail_ur, details } = singleNews;
 
   return (
