@@ -1,10 +1,21 @@
 
-
+"use client"
 import Categories from "@/components/HomeSection/Categories";
 
 import Slider from "./gallary/Slider";
+import { useEffect } from "react";
+import AOS from "aos";
 
+import "aos/dist/aos.css";
+import AboutPage from "./about/page";
 const HomePage = () => {
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 50,
+    });
+  }, []);
   return (
     <div className="mx-6">
       <div className="bannarImage flex flex-col justify-center items-center">
@@ -27,7 +38,11 @@ const HomePage = () => {
       </div>
       <div>
         <Categories />
+      </div>  
+      <div>
+        <AboutPage/>
       </div>
+
     </div>
   );
 };

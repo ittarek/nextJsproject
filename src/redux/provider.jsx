@@ -1,11 +1,8 @@
-"use client"
+"use client";
 
-const provider = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
+import { store } from "./store";
+import { Provider } from "react-redux";
 
-export default provider;
+export function Providers({ children }) {
+  return <Provider store={store}>{children}</Provider>;
+}
