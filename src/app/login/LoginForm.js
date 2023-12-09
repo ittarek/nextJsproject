@@ -4,10 +4,13 @@ import Link from "next/link";
 import { useForm } from "react-hook-form"
 import { useDispatch } from "react-redux";
 import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation'
+
 
 
 const LoginForm = () => {
 const dispatch = useDispatch()
+const router = useRouter();
 
     const {
         register,
@@ -15,15 +18,25 @@ const dispatch = useDispatch()
         watch,
         formState: { errors },
       } = useForm()
-    //   taost function
-    const notify = () => toast('Login successfull.',{  duration: 4000,
-        position: 'top-center',});
+
+
       const onSubmit = ({email,password}) =>{ 
-        dispatch(signIn(
-            {    email,
-                password}
-            ))
-            notify();
+    try{   dispatch(signIn({ email,
+              password}
+          )) ;
+
+          toast('Login successfull.',{  duration: 3000,
+            position: 'top-center',});
+            router.push("/")
+  ;
+
+
+            
+
+        }
+        catch(err) {
+       toast(err.message)
+        }
 
         console.log(email,password)}    
     return (

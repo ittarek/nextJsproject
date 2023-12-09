@@ -1,15 +1,26 @@
-const getAllNews = async (category_id) => {
+const getAllNews = async category_id => {
   // let url = "http://localhost:5000/db.json";
-  // let url = "https://vercel.com/ittarek/next-jsproject/CLabEMDvkzrBz8tn9LGJ3QRrxf22/source?f=src%2Fpublic%2Fdb.json";
+  let url = "https://the-news-dragon-server-ittarek.vercel.app/news";
 
   if (category_id) {
     url += "?category_id=" + category_id;
   }
-  const res = await fetch(url, {
-    cache: "force-cache",
-  });
 
-  return res.json();
+  try {
+    const res = await fetch(url, {
+      cache: "force-cache",
+    });
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch data: ${res.status} ${res.statusText}`);
+    }
+
+    return res.json();
+  } catch (error) {
+    console.error("Error fetching data:", error.message);
+    // You might want to handle the error appropriately or rethrow it.
+    throw error;
+  }
 };
 
 export default getAllNews;

@@ -17,9 +17,13 @@ const commonNavData = [
   export const afterLoginNavData = [
     ...commonNavData,
     {
-      path: "/dashboard",
+      path: "/dashBoard",
       title: "Dashboard",
     },
+    {
+      path:"/addNews",
+      title:"Add News"
+    }
   ];
   
   export const beforeLoginNavData = [

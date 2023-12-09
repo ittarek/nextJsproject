@@ -3,24 +3,35 @@ import { createUser } from "@/redux/user/userSlice";
 import Link from "next/link";
 import { useForm } from "react-hook-form"
 import { useDispatch } from "react-redux";
+import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
+
+
 
 
 
 const SignUpForm = () => {
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    const router = useRouter();
+
     const {
         register,
         handleSubmit,
         watch,
         formState: { errors },
-      } = useForm()
-    
+      } = useForm();
+
+
       const onSubmit = ({name,email,password}) =>{ 
-        dispatch(createUser(
+      if(  dispatch(createUser(
         {    email,
             password}
-        ))
+        ))){
+          toast('SignUp successfull.',{  duration: 3000,
+            position: 'top-center',});
+          router.push("/")
+        }
         console.log(name,email,password)}    
     return (
         <div>
